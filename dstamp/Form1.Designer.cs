@@ -88,7 +88,7 @@
             this.Controls.Add(this.radioButton1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "dstamp";
+            this.Text = "datestamp";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.form_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.form_DragEnter);
             this.ResumeLayout(false);
