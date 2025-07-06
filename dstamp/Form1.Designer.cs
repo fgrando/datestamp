@@ -29,63 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.textBoxFormat = new System.Windows.Forms.TextBox();
+            this.labelTimestamp = new System.Windows.Forms.Label();
+            this.labelformat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // textBoxFormat
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "yyy.MM.dd";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.textBoxFormat.Location = new System.Drawing.Point(57, 112);
+            this.textBoxFormat.Name = "textBoxFormat";
+            this.textBoxFormat.Size = new System.Drawing.Size(293, 20);
+            this.textBoxFormat.TabIndex = 4;
+            this.textBoxFormat.Text = "yyy.MM.dd_HH.mm.ss";
             // 
-            // radioButton2
+            // labelTimestamp
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(13, 36);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(127, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "yyy.MM.dd-HH.mm.ss";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.labelTimestamp.AutoSize = true;
+            this.labelTimestamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimestamp.Location = new System.Drawing.Point(10, 31);
+            this.labelTimestamp.Name = "labelTimestamp";
+            this.labelTimestamp.Size = new System.Drawing.Size(131, 31);
+            this.labelTimestamp.TabIndex = 6;
+            this.labelTimestamp.Text = "1.2.3-4:5";
             // 
-            // textBox1
+            // labelformat
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "yyy.MM.dd_HH.mm.ss";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(13, 63);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(59, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "custom";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.labelformat.AutoSize = true;
+            this.labelformat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelformat.Location = new System.Drawing.Point(12, 115);
+            this.labelformat.Name = "labelformat";
+            this.labelformat.Size = new System.Drawing.Size(39, 13);
+            this.labelformat.TabIndex = 7;
+            this.labelformat.Text = "format:";
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 122);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.ClientSize = new System.Drawing.Size(378, 144);
+            this.Controls.Add(this.labelformat);
+            this.Controls.Add(this.labelTimestamp);
+            this.Controls.Add(this.textBoxFormat);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "datestamp";
@@ -97,11 +82,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TextBox textBoxFormat;
+        private System.Windows.Forms.Label labelTimestamp;
+        private System.Windows.Forms.Label labelformat;
     }
 }
 

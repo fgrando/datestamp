@@ -14,9 +14,39 @@ namespace dstamp
 {
     public partial class Form1 : Form
     {
+        private Timer timer;
+
         public Form1()
         {
             InitializeComponent();
+
+            // Initialize and start the timer
+            timer = new Timer();
+            timer.Interval = 500; // milliseconds
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+            // Update label immediately on startup
+            UpdateTimestampLabel();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            UpdateTimestampLabel();
+        }
+
+        private void UpdateTimestampLabel()
+        {
+            string format = textBoxFormat.Text;
+            try
+            {
+                string timestamp = DateTime.Now.ToString(format);
+                labelTimestamp.Text = $"{timestamp}";
+            }
+            catch (Exception ex)
+            {
+                labelTimestamp.Text = $"Error: {ex.Message}";
+            }
         }
 
         private void form_DragEnter(object sender, DragEventArgs e)
@@ -36,24 +66,22 @@ namespace dstamp
             string[] filePaths = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
             // set prefix datetime format
-            string prefix = DateTime.Now.ToString(radioButton1.Text);
-            if (radioButton2.Checked)
-                prefix = DateTime.Now.ToString(radioButton2.Text);
-            if (radioButton3.Checked)
-                prefix = DateTime.Now.ToString(textBox1.Text);
+            string prefix = DateTime.Now.ToString(textBoxFormat.Text);
 
             foreach (string input in filePaths)
             {
                 string name = Path.GetFileName(input);
                 string path = Path.GetDirectoryName(input);
                 string new_name = path + '\\' + prefix + "_" + name;
-                
-                Console.WriteLine("Rename " + input + " to " + new_name);
-                System.IO.File.Move(input, new_name);
-                //System.Windows.Forms.MessageBox.Show(new_name);
-            }
 
-            Close();
+                string message = $"Rename\n{name}\nto\n{prefix}_{name}?";
+                DialogResult dialogResult = MessageBox.Show(this, message, "Rename File", MessageBoxButtons.YesNo);
+                if (dialogResult != DialogResult.Yes)
+                {
+                    continue; // skip to the next file if not confirmed
+                }
+                System.IO.File.Move(input, new_name);
+            }
         }
     }
 }
