@@ -20,3 +20,14 @@ C:\opt\wdir\datestamp\dstamp\obj\Release\dstamp.csproj.GenerateResource.cache
 C:\opt\wdir\datestamp\dstamp\obj\Release\dstamp.csproj.CoreCompileInputs.cache
 C:\opt\wdir\datestamp\dstamp\obj\Release\dstamp.exe
 C:\opt\wdir\datestamp\dstamp\obj\Release\dstamp.pdb
+C:\Users\fgran\Documents\datestamp\dstamp\bin\Release\dstamp.exe.config
+C:\Users\fgran\Documents\datestamp\dstamp\bin\Release\dstamp.exe
+C:\Users\fgran\Documents\datestamp\dstamp\bin\Release\dstamp.pdb
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.csproj.AssemblyReference.cache
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.exe.config
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.Form1.resources
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.Properties.Resources.resources
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.csproj.GenerateResource.cache
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.csproj.CoreCompileInputs.cache
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.exe
+C:\Users\fgran\Documents\datestamp\dstamp\obj\Release\dstamp.pdb
