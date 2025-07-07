@@ -2,7 +2,7 @@
 
 
 ### Windows binary
-[Release](dstamp\bin\Release\dstamp.exe)
+[Release](dstamp/bin/Release/dstamp.exe)
 
 ### Python
 [script](datestamp.pyw)
